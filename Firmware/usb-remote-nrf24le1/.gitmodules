@@ -1,7 +1,0 @@
-[submodule "nRF24LE1_SDK"]
-	path = nRF24LE1_SDK
-	url = https://github.com/DeanCording/nRF24LE1_SDK
-
-[submodule "nRF24LE1_Programmer"]
-	path = nRF24LE1_Programmer
-	url = https://github.com/polkabana/nRF24LE1_Programmer

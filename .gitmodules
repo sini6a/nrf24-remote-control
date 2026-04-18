@@ -1,0 +1,11 @@
+[submodule "Firmware/nrf24le1-transmitter/nRF24LE1_SDK"]
+	path = Firmware/nrf24le1-transmitter/nRF24LE1_SDK
+	url = https://github.com/DeanCording/nRF24LE1_SDK
+
+[submodule "Firmware/nrf24le1-transmitter/nRF24LE1_Programmer"]
+	path = Firmware/nrf24le1-transmitter/nRF24LE1_Programmer
+	url = https://github.com/polkabana/nRF24LE1_Programmer
+
+[submodule "Firmware/nrf52820-receiver/nrf5_sdk"]
+	path = Firmware/nrf52820-receiver/nrf5_sdk
+	url = https://github.com/greenlsi/nrf5-sdk
