@@ -46,7 +46,7 @@ See [Firmware/nrf52820-receiver/README.md](Firmware/nrf52820-receiver/README.md)
 
 - [Dean Cording](https://github.com/DeanCording/nRF24LE1_SDK) — nRF24LE1 SDK used by the transmitter firmware
 - [polkabana](https://github.com/polkabana/nRF24LE1_Programmer) — nRF24LE1 Programmer utility used for flashing the transmitter
-- [Nordic Semiconductor](https://github.com/NordicSemiconductor/nRF5-SDK) — nRF5 SDK used by the receiver firmware
+- [greenlsi](https://github.com/greenlsi/nrf5-sdk/) — nRF5 SDK used by the receiver firmware
 
 ## Contribution
 
