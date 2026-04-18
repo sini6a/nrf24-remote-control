@@ -61,8 +61,8 @@ Each packet is 4 bytes:
 
 ## Related Project
 
-Receiver firmware project (nRF52820) is located in sibling folder:
-- `../receiver/src`
+Receiver firmware (nRF52820) is located in the sibling folder:
+- `../nrf52820-receiver/`
 
 ## References
 

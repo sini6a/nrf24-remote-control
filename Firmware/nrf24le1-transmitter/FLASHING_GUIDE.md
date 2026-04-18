@@ -8,7 +8,7 @@ Download SDCC:
 - Downloads page: https://sourceforge.net/projects/sdcc/files/
 
 ## 1) Build transmitter firmware
-From `Desktop/src`:
+From `Firmware/usb-remote-nrf24le1/`:
 
 ```bat
 run.bat
@@ -38,6 +38,7 @@ Programmer.exe \\.\COM3 w .\src\output_rx.ihx
 ```
 
 ## 4) Debug serial notes
-- Default debug baud in this project is `9600`.
+- Default debug baud in this project is `19200`.
 - Debug pin depends on package type (set in firmware logic).
 - On 32-pin devices, UART TX is typically `P0.3`.
+- Enable debug output by uncommenting `#define DEBUG` in `config.h`.

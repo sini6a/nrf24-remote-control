@@ -1,35 +1,53 @@
 # nRF24-Based Remote Control
 
-This project contains source code for both the transmitter and the receiver. The PCBs and the code is successfully tested and working as intended. The first revision of the remote needs soldering external wires for programming but this has been fixed with updated programming header in the current revision.
+A complete 2.4 GHz wireless remote control system. The PCBs and firmware are tested and working. The first PCB revision required soldering external wires for programming — this was fixed with an updated programming header in the current revision.
 
-## Transmitter  
+## Repository Layout
 
-The transmitter is based on the **nRF24LE1**, which uses a proprietary 2.4 GHz technology called **ShockBurst**. This chip operates within a voltage range of **1.9V to 3.6V**, making it ideal for **two AAA batteries**.  
+```
+Firmware/
+  nrf24le1-transmitter/   # Transmitter firmware (SDCC / nRF24LE1)
+  nrf52820-receiver/      # Receiver firmware (CMake / nRF52820)
+KiCad/
+  nrf24le1-transmitter/   # Transmitter PCB design
+  nrf52820-receiver/      # Receiver PCB design
+```
 
-### Features:
-- **15 keys** – two of which are positioned on the PCB's side. These side keys are not intended for use but may be useful for experimentation.  
-- **Antenna placement** – positioned on the top side of the PCB for improved signal performance.  
-- **Programming interface** – uses an **SPI interface** and additional PROG pin to flash it through Arduino. Pinout is printed on the board.  
+## Transmitter
 
-## Receiver  
+The transmitter is based on the **nRF24LE1**, which uses Nordic's proprietary 2.4 GHz **ShockBurst** protocol. This chip operates at **1.9 V – 3.6 V**, making it ideal for **two AAA batteries**.
 
-The receiver is based on the **nRF52820**, the most cost-effective chip that supports **USB HID** natively. It is an ARM-based microcontroller that uses **SWD and SWDCLK lines** for flashing.  
+### Features
+- **15 buttons** — two positioned on the PCB sides for experimentation
+- **Antenna** — top-mounted PCB trace antenna for improved signal
+- **Programming** — SPI + PROG pin, flashable via Arduino; pinout printed on board
 
-### Features:
-- **USB HID support** – translates the received 2.4 GHz signal into a USB interface.  
-- **Programming interface** – uses the **TagConnect 6-pin NL connector**.  
-- **No additional I/O usage** – the chip's primary function is signal conversion.  
-- **Hardware design** – includes a **PCB antenna** and a **PCB USB 2.0 connector**.  
+See [Firmware/nrf24le1-transmitter/README.md](Firmware/nrf24le1-transmitter/README.md) and [FLASHING_GUIDE.md](Firmware/nrf24le1-transmitter/FLASHING_GUIDE.md).
 
-## Further Work  
+## Receiver
 
-As soon as the PCBs arrive, I will begin testing and programming the devices to work together.  
+The receiver is based on the **nRF52820**, the most cost-effective Nordic chip with native **USB HID** support. It is an ARM Cortex-M4 microcontroller programmed over **SWD**.
 
-- [x] Program the remote  
-- [x] Program the receiver  
-- [x] Test stability and antenna performance  
-- [x] Design a 3D-printed case  
+### Features
+- **USB HID** — exposes keyboard and consumer-control interfaces to the host
+- **Programming** — TagConnect 6-pin NL connector (SWD)
+- **Hardware** — PCB trace antenna and PCB-mount USB 2.0 connector
 
-## Contribution  
+See [Firmware/nrf52820-receiver/README.md](Firmware/nrf52820-receiver/README.md) and [FLASHING_GUIDE.md](Firmware/nrf52820-receiver/FLASHING_GUIDE.md).
 
-Contributions are welcome! If you plan to contribute, please open an issue first to discuss your proposed changes.  
+## Status
+
+- [x] Program the remote
+- [x] Program the receiver
+- [x] Test stability and antenna performance
+- [x] Design a 3D-printed case
+
+## Acknowledgements
+
+- [Dean Cording](https://github.com/DeanCording/nRF24LE1_SDK) — nRF24LE1 SDK used by the transmitter firmware
+- [polkabana](https://github.com/polkabana/nRF24LE1_Programmer) — nRF24LE1 Programmer utility used for flashing the transmitter
+- [Nordic Semiconductor](https://github.com/NordicSemiconductor/nRF5-SDK) — nRF5 SDK used by the receiver firmware
+
+## Contribution
+
+Contributions are welcome! Please open an issue first to discuss your proposed changes before submitting a pull request.
