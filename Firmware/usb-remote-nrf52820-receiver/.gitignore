@@ -1,0 +1,31 @@
+# Build directories
+build/
+build_rx/
+
+# Toolchain/intermediate outputs
+*.o
+*.obj
+*.d
+*.su
+*.lst
+
+# Binary outputs
+*.elf
+*.hex
+*.map
+*.bin
+
+# CMake-generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Logs/temp
+*.log
+tmp/
+
+# OS/editor
+.DS_Store
+Thumbs.db
