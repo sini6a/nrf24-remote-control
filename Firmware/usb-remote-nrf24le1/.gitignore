@@ -1,0 +1,20 @@
+# Build outputs
+*.ihx
+*.hex
+*.lk
+*.map
+*.mem
+*.rel
+*.rst
+*.sym
+*.lst
+*.asm
+
+# CMake / tool build dirs
+build/
+build_rx/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.log
