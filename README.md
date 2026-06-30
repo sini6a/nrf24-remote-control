@@ -2,6 +2,8 @@
 
 A complete 2.4 GHz wireless remote control system. The PCBs and firmware are tested and working. The first PCB revision required soldering external wires for programming — this was fixed with an updated programming header in the current revision.
 
+![image](IMG_20260419_102033.jpg)
+
 ## Repository Layout
 
 ```
