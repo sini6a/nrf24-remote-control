@@ -53,3 +53,9 @@ See [Firmware/nrf52820-receiver/README.md](Firmware/nrf52820-receiver/README.md)
 ## Contribution
 
 Contributions are welcome! Please open an issue first to discuss your proposed changes before submitting a pull request.
+
+## Support
+
+If you find this project useful, you can buy me a coffee:
+
+<a href="https://buymeacoffee.com/sini6a"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50"></a>
